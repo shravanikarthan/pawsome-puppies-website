@@ -1,0 +1,301 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #fffaf3;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background-color: #ffffff;
+}
+
+.logo {
+    color: #d97732;
+    font-size: 26px;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d97732;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background-color: #ffead5;
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    color: #5c3520;
+    margin: 0 0 20px;
+}
+
+.hero p {
+    font-size: 17px;
+    color: #604532;
+    margin: 0 0 30px;
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: #d97732;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 26px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #a94f19;
+    transform: translateY(-2px);
+}
+
+.puppies {
+    padding: 55px 6%;
+    text-align: center;
+}
+
+.puppies h2 {
+    font-size: 32px;
+    color: #5c3520;
+    margin: 0 0 10px;
+}
+
+.section-text {
+    font-size: 16px;
+    color: #666666;
+    margin: 0 0 35px;
+}
+
+
+.puppy-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    text-align: left;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+    min-width: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #fffaf3;
+}
+
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: #3b2b23;
+    font-size: 22px;
+    margin: 0 0 10px;
+}
+
+.card-content p {
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 15px;
+}
+
+.card-content span {
+    display: inline-block;
+    background-color: #ffead5;
+    color: #8b4513;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+
+
+.adopt {
+    text-align: center;
+    padding: 55px 20px;
+    background-color: #ffead5;
+}
+
+.adopt h2 {
+    color: #5c3520;
+    font-size: 28px;
+    margin: 0 0 12px;
+}
+
+.adopt p {
+    color: #604532;
+    font-size: 16px;
+    margin: 0 0 25px;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #3b2b23;
+    color: #ffffff;
+    padding: 30px 20px;
+}
+
+footer h2 {
+    font-size: 22px;
+    margin: 0 0 10px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+
+    .puppy-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .card img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 65px 20px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .puppies {
+        padding: 40px 6%;
+    }
+
+    .puppies h2 {
+        font-size: 27px;
+    }
+
+    .puppy-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .card img {
+        height: 280px;
+    }
+
+    .card-content {
+        padding: 18px;
+    }
+
+    .adopt {
+        padding: 40px 20px;
+    }
+
+    .adopt h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .card img {
+        height: 230px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+}
